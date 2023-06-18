@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+if [ -d "./venv" ]; then
+
+	source ./venv/bin/activate
+	python -m ensurepip --upgrade
+	python -m pip install --upgrade "pip>=22.3.1,<23.1.*"
+	python -m pip install -r requirements.txt
+	echo "DONE"
+fi
+
