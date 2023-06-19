@@ -6,4 +6,3 @@ if exist ".\venv" (
 	python -m pip install -r requirements.txt
 	echo "DONE"
 )
-pause
