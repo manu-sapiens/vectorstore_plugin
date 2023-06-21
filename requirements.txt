@@ -13,3 +13,4 @@ pypdf==3.9.0
 sentence-transformers==2.2.2
 pdf2image==1.16.3
 chromadb==0.3.26
+colorama==0.4.6
