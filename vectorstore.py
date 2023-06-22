@@ -12,6 +12,8 @@ from langchain.text_splitter import NLTKTextSplitter
 from tqdm import tqdm
 from fastapi import HTTPException
 from utils.omni_chroma_memory import OmniChromaMemory
+from utils.omni_utils_misc import cprint
+from utils.omni_utils_llm import query_llm, summarize
 
 log = True
 verbose = True
@@ -156,7 +158,7 @@ def review_memories(remembered_info_list, query, system_prompt):
 
     return answer, total_cost
 
-from vectorstore_definitions import VectorstoreQuery_Input, VectorstoreQuery_Response, ENDPOINT_VECTORSTORE_QUERY
+from Plugins.vectorstore_plugin.vectorstore_plugin import VectorstoreQuery_Input, VectorstoreQuery_Response, ENDPOINT_VECTORSTORE_QUERY
 async def integration_VectorstoreQuery_Post(input: VectorstoreQuery_Input):
     cdn= CdnHandler()
     if True: #try:
